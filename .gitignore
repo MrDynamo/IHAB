@@ -1,2 +1,5 @@
-# MkDocs documentation
-/site
+# Secrets
+/.secrets
+
+# Front End/MkDocs Documentation
+/docs/site
