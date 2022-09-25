@@ -1,0 +1,42 @@
+site_name: IHaveABudget (IHAB)
+site_url: https://mrdynamo.github.io/IHAB/
+
+repo_name: MrDynamo/IHAB
+repo_url: https://github.com/MrDynamo/IHAB/
+
+theme:
+  palette:
+  # Light mode
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      toggle:
+        icon: material/weather-night
+        name: Switch to dark mode
+  # Dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      toggle:
+        icon: material/weather-sunny
+        name: Switch to light mode
+  name: material
+  favicon: assets/images/favicon.png
+  icon:
+    logo: material/account-cash
+    repo: fontawesome/brands/git-alt
+  features:
+    - navigation.tracking
+    #- navigation.tabs
+    #- navigation.tabs.sticky
+  extra_css:
+    #- assets/stylesheets/extra.css
+
+#plugins:
+#  - social:
+#      cards_dir: assets/images/social
+
+
+nav:
+  - Home: "index.md"
+  - Reasoning Behind The Project: "documentation/reasoning.md"
+  - Change Log:
+    - v0.0.0: "changelog/v0.0.0.md"
