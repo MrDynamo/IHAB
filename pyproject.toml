@@ -12,7 +12,19 @@ Pillow = "^8.2.0"
 
 [tool.poetry.dev-dependencies]
 mkdocs-material = "^8.2.3"
+pytest = "^6.2.1"
+pytest-cov = "^2.11.0"
 
 [build-system]
 requires = ["poetry-core"]
 build-backend = "poetry.core.masonry.api"
+
+[tool.pytest.ini_options]
+minversion = "6.0"
+addopts = "-ra -q --cov=ihab"
+python_files = 'test_*'
+python_classes = '*Tests'
+python_functions = 'test_*'
+testpaths = [
+    "tests",
+]
