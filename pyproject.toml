@@ -1,0 +1,18 @@
+[tool.poetry]
+name = "ihab"
+version = "0.0.0"
+description = "My project to create software similar to YNAB web for learning purposes"
+authors = ["MrDynamo <mrdynamo@dynamiclab.org>"]
+license = "GPLv3"
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.10"
+Pillow = "^8.2.0"
+
+[tool.poetry.dev-dependencies]
+mkdocs-material = "^8.2.3"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
