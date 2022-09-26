@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+    <url>
+         <loc>https://mrdynamo.github.io/IHAB/</loc>
+         <lastmod>2022-09-26</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://mrdynamo.github.io/IHAB/changelog/v0.0.0/</loc>
+         <lastmod>2022-09-26</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://mrdynamo.github.io/IHAB/documentation/reasoning/</loc>
+         <lastmod>2022-09-26</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+</urlset>
