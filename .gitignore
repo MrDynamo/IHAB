@@ -3,3 +3,6 @@
 
 # Front End/MkDocs Documentation
 /docs/site
+
+# SQLite DB file
+ihab.db
