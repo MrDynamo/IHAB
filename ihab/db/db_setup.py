@@ -1,0 +1,1 @@
+# Build db if not exist. Call models to build tables
