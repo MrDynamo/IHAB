@@ -1,0 +1,33 @@
+{
+  "folders": [
+    {
+      "name": "Frontend",
+      "path": "frontend"
+    },
+    {
+      "name": "Backend",
+      "path": "backend"
+    },
+    {
+      "name": "Documentation",
+      "path": "docs"
+    },
+    {
+      "name": "Other",
+      "path": "./"
+    }
+  ],
+  "launch": {
+    "version": "0.0.1",
+    "compounds": [
+      {
+        "name": "Run All",
+        "configurations": [
+          //"Run Backend: dev",
+          //"Run Frontend: dev"
+        ]
+      }
+    ]
+  },
+  "settings": {}
+}
