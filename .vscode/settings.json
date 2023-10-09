@@ -1,9 +1,19 @@
 {
-  "explorer.fileNesting.enabled": true,
-  "explorer.fileNesting.patterns": {
-    "pyproject.toml": "poetry.lock",
-    "docker-compose.yml": "Dockerfile, .dockerignore, docker-compose.yml",
-    "README.md": "LICENSE"
-  },
-  "python.formatting.provider": "black"
+    "files.exclude": {
+        "backend/": true,
+        "frontend/": true,
+        "venv/": true,
+        "docs/": true
+    }
+
+    "explorer.fileNesting.enabled": true,
+    "explorer.fileNesting.patterns": {
+        "pyproject.toml": "poetry.lock",
+        "docker-compose.yml": "Dockerfile, .dockerignore, docker-compose.yml",
+        "README.md": "LICENSE"
+    },
+    "python.formatting.provider": "none",
+    "[python]": {
+        "editor.defaultFormatter": "ms-python.black-formatter"
+    }
 }

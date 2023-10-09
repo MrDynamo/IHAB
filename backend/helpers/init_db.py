@@ -8,7 +8,8 @@ PROJECT_DIR = Path(__file__).parent.parent.parent
 
 #logger = global_logger.get_logger("init_db")
 
-engine = db.create_engine('sqlite:///ihab.db')
+#engine = db.create_engine('sqlite+pysqlite:///data/ihab.db', echo=True)
+engine = db.create_engine('sqlite+pysqlite:///:memory:', echo=True)
 connection = engine.connect()
 metadata = db.MetaData()
 
@@ -23,7 +24,7 @@ metadata.create_all(engine)
 
 print('success!')
 
-query = db.select([test])
+query = db.select(test)
 
 #ResultProxy = connection.execute(query)
 #ResultSet = ResultProxy.fetchall
@@ -33,6 +34,12 @@ results = connection.execute(query).fetchall()
 df = pd.DataFrame(results)
 df.columns = results
 df.head(4)
+
+
+
+# df = pd.read_sql("SELECT * FROM test", connection)
+
+# print ('test')
 
 metadata.drop_all
 connection.close

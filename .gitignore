@@ -6,3 +6,6 @@
 
 # SQLite DB file
 ihab.db
+
+# Pyenv files
+.python-version
