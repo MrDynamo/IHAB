@@ -3,31 +3,13 @@
 from pathlib import Path
 import sqlalchemy as db
 import pandas as pd
-import os
 
 PROJECT_DIR = Path(__file__).parent.parent.parent
-DATA_DIR = Path(str(PROJECT_DIR) + "/backend/data")
 
 #logger = global_logger.get_logger("init_db")
 
-### TODO: SETUP_DB()
-### Use DB models to create default db
-def setup_db():
-    print("db setup")
-
-
-
-### INIT_DB()
-
-### If /backend/data folder doesn't exist, create it
-if not DATA_DIR.exists():
-    print("data_dir doesn't exist, creating...")
-    os.mkdir(DATA_DIR)
-    setup_db()
-
-
-### Create session
-engine = db.create_engine('sqlite+pysqlite:///data/ihab.db', echo=True)
+#engine = db.create_engine('sqlite+pysqlite:///data/ihab.db', echo=True)
+engine = db.create_engine('sqlite+pysqlite:///:memory:', echo=True)
 connection = engine.connect()
 metadata = db.MetaData()
 
@@ -40,6 +22,24 @@ test = db.Table('test', metadata,
 
 metadata.create_all(engine)
 
-Session = db.sessionmaker()
-Session.configure(bind=engine)
-session = Session()
+print('success!')
+
+query = db.select(test)
+
+#ResultProxy = connection.execute(query)
+#ResultSet = ResultProxy.fetchall
+
+results = connection.execute(query).fetchall()
+
+df = pd.DataFrame(results)
+df.columns = results
+df.head(4)
+
+
+
+# df = pd.read_sql("SELECT * FROM test", connection)
+
+# print ('test')
+
+metadata.drop_all
+connection.close

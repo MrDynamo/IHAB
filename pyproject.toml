@@ -9,11 +9,10 @@ readme = "README.md"
 [tool.poetry.dependencies]
 python = ">=3.12,<3.13"
 Pillow = "^10.0.1"
-SQLAlchemy = "^2.0.0"
-cython = "^3.0.3"
 pandas = "^2.1.1"
 flask = "^3.0.0"
 flask-cors = "^4.0.0"
+flask-sqlalchemy = "^3.1.1"
 
 [tool.poetry.dev-dependencies]
 mkdocs-material = "^8.2.3"
